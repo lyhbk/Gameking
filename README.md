@@ -7,7 +7,7 @@
 
 演示视频与可执行程序在Release中:
 
-https://github.com/lyhbk/GameKing/releases/download/v1.0.0/Demo‑Windows.zip
+https://github.com/lyhbk/GameKing/releases/Demo/Demo.zip
 > 解压后运行exe即可，无需安装Unity。
 
 
