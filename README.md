@@ -19,7 +19,7 @@ https://github.com/lyhbk/GameKing/releases/download/v1.0.0/Demo‑Windows.zip
 5. 卡牌满足发动条件，卡牌会亮起发动按钮，可以发动卡牌效果；支持连锁、诱发效果弹窗
 6. 点击【下一阶段】推进回合；敌方 AI 会自动执行回合操作
 
-   
+```
 Assets
 ├── Script 
 │   ├── Core                 # 游戏核心逻辑
@@ -52,7 +52,7 @@ Assets
 │   ├── card_img                # 卡牌图片资源
 │   └── UI                      # UI图集资源
 └── CardData.csv                # 卡牌配置表
-
+```
 系统设计说明:
 
 分层架构:
