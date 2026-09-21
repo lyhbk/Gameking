@@ -20,7 +20,7 @@ https://github.com/lyhbk/GameKing/releases/download/v1.0.0/Demo‑Windows.zip
 6. 点击【下一阶段】推进回合；敌方 AI 会自动执行回合操作
 
    
-Assets /n 
+Assets \n 
 ├── Script 
 │   ├── Core                 # 游戏核心逻辑
 │   │   ├── GameManage.cs       # 游戏全局管理、场景切换、资源加载
