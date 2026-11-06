@@ -11,6 +11,17 @@
 https://github.com/lyhbk/GameKing/releases/
 > 解压后运行exe即可，无需安装Unity。
 
+```
+## 一、项目概览
+| 项目 | 说明 |
+| --- | --- |
+| 引擎 | 团结引擎 Tuanjie 1.10.3（Unity 2022.3.62t15，内置渲染管线的 2D/UGUI 方案） |
+| 语言 | C#（.NET Standard 2.1，Unity 运行时） |
+| 核心依赖 | Cysharp UniTask（异步时序）、TextMeshPro、Newtonsoft.Json |
+| 场景 | `load_game`（启动）→ `mainscene`（主菜单/卡组编辑）→ `fighting`（对局）→ `record`（回放） |
+| 数据 | `Assets/Resources/carddata.csv`（卡牌配置表，当前收录 14 张样例卡） |
+| 交付形态 | Windows 可执行程序（见 Release），解压运行 exe 即可，无需安装引擎 |
+```
 
 ```
 ### 开发中遇到的问题及解决方案
