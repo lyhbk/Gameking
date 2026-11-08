@@ -67,10 +67,8 @@ Assets
 
 ###  状态机与时点：两套概念分开
 
-| 维度 | 取值 | 作用 |
-| --- | --- | --- |
 | 阶段（Phase） | `DrawCardPhase → PreparePhase → Main1Phase → FightPhase → Main2Phase → EndPhase` | 回合推进的主干流程 |
-| 时点（TimePoint） | 自由时点、诱发时点、战斗时点、连锁时点 | 决定「此刻能做什么」，自由时点才可主动发动 |
+| 时点（TimePoint） | 自由时点、诱发时点、战斗时点、连锁时点 | 决定「此刻能做什么」，自由时点才可主动发动效果 |
 
 - **连锁栈**：效果封装为 `EffOrder` 命令对象压栈，**后入先出逆序结算**。
 - **结算临界区 `RegionAccessGate`**：FIFO 排队门闩，同一时刻只允许一条效果链在跑，杜绝多异步并发读写场面。
