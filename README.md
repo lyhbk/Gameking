@@ -4,7 +4,7 @@
 项目简介：Unity C# 实现的卡牌对战 Demo，实现怪兽召唤、祭品召唤、融合召唤、魔法陷阱发动、连锁 / 诱发效果、AI 对手、回合阶段系统 ,对局回放系统；
 支持 CSV 配置卡牌数据，数据层与 UI 层解耦。
 
-具体代码在Code中
+具体代码在Code中,单元测试代码在Tests中
 
 演示视频与可执行程序在Release中:
 
@@ -23,40 +23,7 @@ https://github.com/lyhbk/GameKing/releases/
 | 交付形态 | Windows 可执行程序（见 Release），解压运行 exe 即可，无需安装引擎 |
 ```
 
-```
-Assets
-├── Script 
-│   ├── Core                 # 游戏核心逻辑
-│   │   ├── GameManage.cs       # 游戏全局管理、场景切换、资源加载
-│   │   ├── FightLogic.cs       # 战斗数据层，处理对局数据、状态机
-│   │   ├── StateMachine.cs     # 回合状态机、时点、连锁栈、结算临界区
-│   │   ├── EventMintor.cs      # 全局游戏事件广播
-│   │   ├── Factory.cs          # 工厂类：卡牌实体、代价/效果组件解析工厂
-│   │   ├── EntityPlayer.cs     # 玩家实体，各个卡牌区域(卡组/墓地/除外等)
-│   │   ├── EnemyAI.cs          # 敌方AI逻辑
-│   │   ├── FightAsyncScope.cs  # 对局异步取消令牌，安全终止UniTask异步链
-│   │   ├── EQ.cs               # UI回调容器，效果执行时调用UI动画弹窗
-│   │   ├── ExternalQuestBase.cs # UI与Logic交互接口定义
-│   │   └── EffLogic.cs         #效果的发动判断,代价支付与效果执行实现类
-│   ├── Card
-│   │   ├── CardBase.cs         # 卡牌静态数据模型，怪兽/魔法/陷阱基类
-│   │   └── LoadCardData.cs     # CSV卡牌配置读取解析
-│   ├── UI
-│   │   ├── FightUI.cs          # 战斗场景UI层，处理卡牌预制体、弹窗、移动动画
-│   │   ├── PreEntityCard.cs    # 单张卡牌UI组件，点击、发动效果、按钮交互
-│   │   ├── RegClick.cs         # 场上格子点击组件，处理召唤/盖放
-│   │   ├── ObjectPool.cs       # 卡牌预制体对象池
-│   │   ├── UILinkLogic.cs      # UI<->Logic中间层，实现接口，转发请求
-│   │   └── UILinkLogicComRoot.cs # 战斗场景入口，各模块注入初始化
-│   └── MainScene
-│       ├── Player.cs           # 玩家预设卡组管理
-│       ├── LoadGame.cs         # 启动场景脚本，视频播放、跳转战斗场景
-│       └── TemporaryCardPre.cs # 主菜单卡牌预览
-├── Resources
-│   ├── card_img                # 卡牌图片资源
-│   └── UI                      # UI图集资源
-└── CardData.csv                # 卡牌配置表
-```
+
 ```
 系统设计说明:
 
